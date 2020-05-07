@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerCamera : MonoBehaviour
+{
+    public float mouseSensitivity;
+    float xAxisClamp;
+    public Camera PlayerCam;
+    bool canTake;
+    
+    [SerializeField]
+    private Transform player, playerArms;
+
+    public RaycastHit hit;
+    
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    void Update()
+    {
+        CameraRotate();
+    }
+
+    void CameraRotate()
+    {
+        float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = Input.GetAxis("Mouse Y");
+
+        float rotAmountX = mouseX * mouseSensitivity;
+        float rotAmountY = mouseY * mouseSensitivity;
+
+        xAxisClamp -= rotAmountY;
+        
+        Vector3 rotPlayerArms = playerArms.transform.rotation.eulerAngles;
+        Vector3 rotPlayer = player.transform.rotation.eulerAngles;
+
+        rotPlayerArms.x -= rotAmountY;
+        rotPlayerArms.z = 0;
+        rotPlayer.y += rotAmountX;
+
+        if (xAxisClamp > 90)
+        {
+            xAxisClamp = 90;
+            rotPlayerArms.x = 90;
+        }
+        else if (xAxisClamp < -90)
+        {
+            xAxisClamp = -90;
+            rotPlayerArms.x = 270;
+        }
+
+        playerArms.rotation = Quaternion.Euler(rotPlayerArms);
+        player.rotation = Quaternion.Euler(rotPlayer);
+    }
+    
+    
+}
