@@ -21,15 +21,16 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: purplecrystal
-  m_Shader: {fileID: -6465566751694194690, guid: cd3b42f4fecf2c04ba81efecd16bafd8,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: cd3b42f4fecf2c04ba81efecd16bafd8, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -77,7 +78,7 @@ Material:
     - Vector1_800C0A23: 1
     - Vector1_8FDC7A6E: 0.5
     - Vector1_90E1B224: 0
-    - Vector1_97783216: 1
+    - Vector1_97783216: 2.53
     - Vector1_FD9B16DB: 2
     - _AlphaClip: 0
     - _Blend: 0
@@ -101,9 +102,10 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_609FA73B: {r: 0.89825565, g: 0, b: 1.6245048, a: 0}
+    - Color_609FA73B: {r: 0.015062587, g: 0, b: 0.026887422, a: 0}
     - Vector2_888A61F3: {r: 0.3, g: 1, b: 0, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []

@@ -21,15 +21,16 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: yellowcrystal
-  m_Shader: {fileID: -6465566751694194690, guid: cd3b42f4fecf2c04ba81efecd16bafd8,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: cd3b42f4fecf2c04ba81efecd16bafd8, type: 3}
   m_ShaderKeywords: _ENVIRONMENTREFLECTIONS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -101,9 +102,10 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_609FA73B: {r: 1.216786, g: 1.0702621, b: 0, a: 0}
+    - Color_609FA73B: {r: 0.19607843, g: 0.14901961, b: 0, a: 0}
     - Vector2_888A61F3: {r: 0.3, g: 1, b: 0, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []

@@ -15,7 +15,7 @@ public class CrystalVain : Interactable
         if (!isEmpty && dropCrystal)
         {
             GameObject crystal;
-            moveCrystal = new Vector3(transform.position.x +1, transform.position.y -0.1f, transform.position.z);
+            moveCrystal = new Vector3(transform.position.x + 1.5f, transform.position.y, transform.position.z);
             crystal = Instantiate(crystalPrefab, moveCrystal, transform.rotation);
             crystal.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.forward * 2);
 

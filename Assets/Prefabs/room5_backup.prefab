@@ -56,6 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -80,6 +81,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &1678640922261226431
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -105,6 +107,7 @@ GameObject:
   - component: {fileID: 4817052233571653562}
   - component: {fileID: 4942688125019128758}
   - component: {fileID: 6295102004280564711}
+  - component: {fileID: 1049439299381329630}
   m_Layer: 0
   m_Name: Wall 1
   m_TagString: Untagged
@@ -121,7 +124,7 @@ Transform:
   m_GameObject: {fileID: 3565331790715372116}
   m_LocalRotation: {x: 1.7112914e-15, y: 1, z: -0.000000021855694, w: 0.0000000754979}
   m_LocalPosition: {x: -0, y: 10, z: 4.9020677}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.02, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 262516618351644538}
   m_RootOrder: 3
@@ -149,6 +152,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -173,6 +177,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1049439299381329630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3565331790715372116}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.005414, y: 20, z: 1.247489}
+  m_Center: {x: 0.0027070045, y: 3.513409e-16, z: -0.86072016}
 --- !u!1 &3891106375113801065
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,6 +237,7 @@ GameObject:
   - component: {fileID: 7703130488033236276}
   - component: {fileID: 6012388321140532739}
   - component: {fileID: 9035960411871708992}
+  - component: {fileID: 7959982022511582251}
   m_Layer: 0
   m_Name: Wall 4
   m_TagString: Untagged
@@ -235,7 +254,7 @@ Transform:
   m_GameObject: {fileID: 3913086536847192147}
   m_LocalRotation: {x: 0.000000015454312, y: 0.7071068, z: -0.000000015454312, w: 0.7071068}
   m_LocalPosition: {x: -5, y: 10, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.02, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 262516618351644538}
   m_RootOrder: 2
@@ -263,6 +282,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -287,6 +307,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7959982022511582251
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3913086536847192147}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.005417, y: 20, z: 1.3756397}
+  m_Center: {x: 0.0027070045, y: 8.1785224e-16, z: 0.6371688}
 --- !u!1 &7750495964388003218
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,6 +332,7 @@ GameObject:
   - component: {fileID: 835607316389669411}
   - component: {fileID: 8286364491932768693}
   - component: {fileID: 6229079247321247233}
+  - component: {fileID: 2194801503302104361}
   m_Layer: 0
   m_Name: Wall 2
   m_TagString: Untagged
@@ -314,7 +349,7 @@ Transform:
   m_GameObject: {fileID: 7750495964388003218}
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.0050552837, y: 10, z: -5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.02, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 262516618351644538}
   m_RootOrder: 1
@@ -342,6 +377,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -366,6 +402,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2194801503302104361
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7750495964388003218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.005414, y: 20, z: 1.6096041}
+  m_Center: {x: 0.0027070045, y: 1.1105237e-17, z: -0.018429846}
 --- !u!1 &8127317540565004336
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +427,7 @@ GameObject:
   - component: {fileID: 5487706265222641884}
   - component: {fileID: 5079425574029574170}
   - component: {fileID: 5344311584293072039}
+  - component: {fileID: 8324471989476442811}
   m_Layer: 0
   m_Name: Wall 3
   m_TagString: Untagged
@@ -393,7 +444,7 @@ Transform:
   m_GameObject: {fileID: 8127317540565004336}
   m_LocalRotation: {x: 0.000000015454312, y: -0.7071068, z: 0.000000015454312, w: 0.7071068}
   m_LocalPosition: {x: 5, y: 10, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.02, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 262516618351644538}
   m_RootOrder: 4
@@ -421,6 +472,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -445,3 +497,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8324471989476442811
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8127317540565004336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.005417, y: 20, z: 2.4333177}
+  m_Center: {x: 0.0027070045, y: 5.7676083e-16, z: 0.3934269}

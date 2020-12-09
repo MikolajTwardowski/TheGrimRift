@@ -47,7 +47,7 @@ public class InteractionSystem : MonoBehaviour
 
     void ChangeColliderEnable(Collider collider) => collider.enabled = !collider.enabled;
 
-    bool CheckIfSlotForItemIsFull() { return itemSlot.childCount >= 1 ? true : false; } 
+    bool CheckIfSlotForItemIsFull() { return itemSlot.childCount >= 1 ? true : false; }
 
     void DropHoldenItem()
     {
