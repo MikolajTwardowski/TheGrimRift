@@ -19,6 +19,8 @@ public class MyPlayerController : MonoBehaviour
     public float cameraMaxXAngle = 60;
     public float cameraMinXAngle = -60;
 
+    public bool isDead = false;
+
     private void Start()
     {
         Cursor.visible = cursorVisible;
@@ -34,6 +36,8 @@ public class MyPlayerController : MonoBehaviour
 
         cameraXRotation = playerCamera.transform.localRotation.eulerAngles.x;
     }
+
+    
 
     void MovingXZ()
     {
@@ -70,6 +74,12 @@ public class MyPlayerController : MonoBehaviour
     {
         MovingXZ();
         Rotating();
+
+        if (isDead == true)
+        {
+            Debug.Log("Umarłeś");
+        }
+        
     }
 
 }
