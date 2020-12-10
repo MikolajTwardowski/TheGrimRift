@@ -23,8 +23,8 @@ public class MenuManager : MonoBehaviour
                 player.GetComponent<MyPlayerController>().enabled = true;
                 Time.timeScale = 1.0f;
                 ingameMenu.SetActive(false);
-                Cursor.visible = false;
-                Screen.lockCursor = false;
+               // Cursor.visible = false;
+                //Screen.lockCursor = false;
                 Paused = false;
             }
             else if (Paused == false)
@@ -33,7 +33,7 @@ public class MenuManager : MonoBehaviour
                 Time.timeScale = 0.0f;
                 ingameMenu.SetActive(true);
                 Cursor.visible = true;
-                Screen.lockCursor = true;
+                //Screen.lockCursor = true;
                 Paused = true;
             }
         }

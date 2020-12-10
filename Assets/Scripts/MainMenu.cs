@@ -24,8 +24,8 @@ public class MainMenu : MonoBehaviour
         player.GetComponent<MyPlayerController>().enabled = true;
         Time.timeScale = 1.0f;
         ingameMenu.SetActive (false);
-        Cursor.visible = false;
-        Screen.lockCursor = true;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+        //Screen.lockCursor = true;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 }
