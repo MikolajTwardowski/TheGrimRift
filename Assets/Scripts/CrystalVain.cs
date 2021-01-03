@@ -9,6 +9,8 @@ public class CrystalVain : Interactable
     bool isEmpty = false;
     public GameObject crystalPrefab;
     private Vector3 moveCrystal;
+   // public GameObject BrokenPickaxeMessage;
+    [SerializeField] float time = 5f;
     
     protected override void InteractionWithPickaxe(GameObject item)
     {
@@ -22,7 +24,9 @@ public class CrystalVain : Interactable
             SoundManager.current.PlaySound(SoundManager.Sound.Mining);
             
             isEmpty = true;
-            dropCrystal = false;
+            //dropCrystal = false;
+            Destroy(item);
+            //BrokenPickaxeMessage.SetActive(true);
         }
         else if (isEmpty)
         {
@@ -30,7 +34,14 @@ public class CrystalVain : Interactable
             Debug.Log("Nothing left");
         }
     }
-
+    
+    /*void HideMessagePickaxe(GameObject item)
+    {
+        for (float i = time; i > 0; i--)
+        {
+            BrokenPickaxeMessage.SetActive(false);
+        }
+    }*/
     protected override void InteractionWithCrystalShard(GameObject item)
     {
         Debug.Log("Use pickaxe, not crystalshard!");

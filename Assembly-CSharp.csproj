@@ -53,17 +53,17 @@
      <Compile Include="Assets\Scripts\WallRandomizer.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\SlimeSensor.cs" />
-     <Compile Include="Assets\PulsingLight.cs" />
      <Compile Include="Assets\Scripts\Interactable.cs" />
      <Compile Include="Assets\Scripts\Teleporter.cs" />
      <Compile Include="Assets\Scripts\MenuManager.cs" />
+     <Compile Include="Assets\Scripts\YouDiedCountdown.cs" />
      <Compile Include="Assets\Scripts\Interactables\Pedestal.cs" />
      <Compile Include="Assets\Scripts\SlimeEnemy.cs" />
      <Compile Include="Assets\Scripts\Player\MyPlayerController.cs" />
      <Compile Include="Assets\Scripts\CrystalVain.cs" />
      <Compile Include="Assets\Scripts\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\Portal.cs" />
-     <Compile Include="Assets\UISystem.cs" />
+     <Compile Include="Assets\Scripts\UISystem.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Scripts\Player\InteractionSystem.cs" />
      <Compile Include="Assets\Scripts\MyEventSystem.cs" />
@@ -76,6 +76,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\Fabric\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -339,6 +340,9 @@
  </Reference>
  <Reference Include="UnityEditor">
  <HintPath>D:/Programy/Unity/2020.1.7f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="Fabric.Core">
+ <HintPath>D:/Grim Rift Project/Level/Grim Rift HDRP/Assets/Fabric/Fabric.Core.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>D:/Programy/Unity/2020.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

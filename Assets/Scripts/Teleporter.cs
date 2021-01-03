@@ -8,6 +8,9 @@ public class Teleporter : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
             other.gameObject.transform.position = transformToTeleportOn.position;
+            SoundManager.current.PlaySound(SoundManager.Sound.Warp);
+        }
     }
 }

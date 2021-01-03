@@ -54,7 +54,13 @@ public class CombatLogic : MonoBehaviour
     public void Death()
     {
         CurrentEnemy.GetComponent<MyPlayerController>().isDead = true;
+        SoundManager.current.PlaySound(SoundManager.Sound.PlayerDeath);
     }
+    
+    public void AttackSound()
+        {
+            SoundManager.current.PlaySound(SoundManager.Sound.MonsterCharge);
+        }
     
     public void Fighting()
     {
@@ -63,6 +69,7 @@ public class CombatLogic : MonoBehaviour
         
         if (attackMode)
         {
+            
             transform.LookAt(CurrentEnemy.transform);
 
             if ((Vector3.Distance(transform.position, CurrentEnemy.transform.position) > 1.5) &&

@@ -313,6 +313,12 @@
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>D:/Programy/Unity/2020.1.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="Fabric.Core">
+ <HintPath>D:/Grim Rift Project/Level/Grim Rift HDRP/Assets/Fabric/Fabric.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="Fabric.Core.Editor">
+ <HintPath>D:/Grim Rift Project/Level/Grim Rift HDRP/Assets/Fabric/Editor/Fabric.Core.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="ICSharpCode.NRefactory">
  <HintPath>D:/Grim Rift Project/Level/Grim Rift HDRP/Library/PackageCache/com.unity.render-pipelines.core@8.2.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
  </Reference>

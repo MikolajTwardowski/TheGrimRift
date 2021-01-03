@@ -18,8 +18,22 @@ public class MyPlayerController : MonoBehaviour
     float cameraXRotation;
     public float cameraMaxXAngle = 60;
     public float cameraMinXAngle = -60;
+    
+    [SerializeField] GameObject dethCanvas;
+    
+        private bool _isDead = false;
+        public bool isDead 
+        {
+            get { return _isDead; }
+            set
+            {
+                if (_isDead != value)
+                    _isDead = value;
+                dethCanvas.SetActive(true);
+            }
+        }
 
-    public bool isDead = false;
+    //public bool isDead = false;
 
     private void Start()
     {
@@ -78,6 +92,7 @@ public class MyPlayerController : MonoBehaviour
         if (isDead == true)
         {
             Debug.Log("Umarłeś");
+            GetComponent<MyPlayerController>().enabled = false;
         }
         
     }

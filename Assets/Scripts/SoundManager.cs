@@ -22,7 +22,10 @@ public class SoundManager : MonoBehaviour
         Mining,
         FootStep,
         PickingUp,
-        PlaceOnPedestal
+        PlaceOnPedestal,
+        Warp,
+        MonsterCharge,
+        PlayerDeath
     }
 
     Dictionary<Sound, float> soundTimerDictionary;
