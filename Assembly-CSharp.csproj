@@ -58,8 +58,8 @@
      <Compile Include="Assets\Scripts\MenuManager.cs" />
      <Compile Include="Assets\Scripts\YouDiedCountdown.cs" />
      <Compile Include="Assets\Scripts\Interactables\Pedestal.cs" />
+     <Compile Include="Assets\ImportedPlayer\MyPlayerController.cs" />
      <Compile Include="Assets\Scripts\SlimeEnemy.cs" />
-     <Compile Include="Assets\Scripts\Player\MyPlayerController.cs" />
      <Compile Include="Assets\Scripts\CrystalVain.cs" />
      <Compile Include="Assets\Scripts\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\Portal.cs" />

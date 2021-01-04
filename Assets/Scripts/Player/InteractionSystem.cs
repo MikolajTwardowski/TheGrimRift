@@ -16,10 +16,13 @@ public class InteractionSystem : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-            CheckForItems();
-        if (Input.GetMouseButtonDown(1))
-            DropHoldenItem();
+        if (GetComponent<MyPlayerController>().blockActions == false)
+        {
+            if (Input.GetMouseButtonDown(0))
+                CheckForItems();
+            if (Input.GetMouseButtonDown(1))
+                DropHoldenItem();
+        }
     }
 
     void PickUp(GameObject item)    // Do poprawy
@@ -74,7 +77,7 @@ public class InteractionSystem : MonoBehaviour
         if (item.CompareTag("Pickaxe"))
         {
             item.rotation = transform.rotation;
-            item.Rotate(-90, 0, 90);
+            item.Rotate(0, 0, 90);
         }
             
     }

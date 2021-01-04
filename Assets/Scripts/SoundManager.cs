@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
     {
         current = this;
         soundTimerDictionary = new Dictionary<Sound, float>();
-        soundTimerDictionary[Sound.FootStep] = 0;
+        //soundTimerDictionary[Sound.Footstep] = 0;
     }
     #endregion
 
@@ -20,7 +20,7 @@ public class SoundManager : MonoBehaviour
     {
         ActivatingPortal,
         Mining,
-        FootStep,
+        Footstep,
         PickingUp,
         PlaceOnPedestal,
         Warp,
@@ -64,7 +64,7 @@ public class SoundManager : MonoBehaviour
         {
             default:
                 return true;
-            case Sound.FootStep:
+           /* case Sound.Footstep:
                 if (soundTimerDictionary.ContainsKey(sound))
                 {
                     float lastTiemPlayed = soundTimerDictionary[sound];
@@ -76,8 +76,8 @@ public class SoundManager : MonoBehaviour
                     }
                     else
                         return false;
-                }
-                else
+                }*/
+              //  else
                     return true;
         }
 

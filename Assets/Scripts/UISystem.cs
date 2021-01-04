@@ -9,7 +9,7 @@ public class UISystem : MonoBehaviour
     Camera playerCamera;
     public GameObject OreMessage;
     public GameObject TakeMessage;
-    
+
     void Start()
     {
         playerCamera = GetComponentInChildren<Camera>();
@@ -33,6 +33,7 @@ public class UISystem : MonoBehaviour
                 OreMessage.SetActive(true);
                 TakeMessage.SetActive(false);
             }
+
             
             else if ((hit.collider.CompareTag("Pickaxe")) || (hit.collider.CompareTag("BlueShard")) || (hit.collider.CompareTag("YellowShard")) || (hit.collider.CompareTag("PurpleShard")))
             {
@@ -40,8 +41,8 @@ public class UISystem : MonoBehaviour
                 OreMessage.SetActive(false);
             }
             
-
         }
+        
         else
         {
             TakeMessage.SetActive(false);
