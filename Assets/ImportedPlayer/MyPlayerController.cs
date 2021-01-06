@@ -8,7 +8,7 @@ public class MyPlayerController : MonoBehaviour
 {
     public bool cursorVisible = true;
     public bool cursorLock = false;
-
+    
     public bool blockActions = false;
 
     Rigidbody playerRigidbody;
@@ -213,16 +213,6 @@ public class MyPlayerController : MonoBehaviour
         StaminaSlider.value = stamina;
         StaminaSlider.maxValue = maxstamina;
 
-
-        if (!blockActions)
-        {
-            MovingXZ();
-            Rotating();
-        }
-
-        if(canMine)
-            Mining();
-
         if (isDead == true)
         {
             Debug.Log("Umarłeś");
@@ -231,29 +221,41 @@ public class MyPlayerController : MonoBehaviour
             GetComponent<Animator>().SetBool("isDead", true);
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
-            isRunning = true;
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (!blockActions)
         {
-            //speed /= speedBoost;
-            speed = 1;
-            GetComponent<Animator>().SetBool("isRunning", false);
-            isRunning = false;
-        }
+            MovingXZ();
+            Rotating();
 
-        if (isRunning)
-        {
-            stamina -= Time.deltaTime;
-            if (stamina < 0)
+
+            if (canMine)
+                Mining();
+
+            
+
+            if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
+                isRunning = true;
+            if (Input.GetKeyUp(KeyCode.LeftShift))
             {
-                stamina = 0;
-                isRunning = false;
+                //speed /= speedBoost;
                 speed = 1;
                 GetComponent<Animator>().SetBool("isRunning", false);
+                isRunning = false;
             }
+
+            if (isRunning)
+            {
+                stamina -= Time.deltaTime;
+                if (stamina < 0)
+                {
+                    stamina = 0;
+                    isRunning = false;
+                    speed = 1;
+                    GetComponent<Animator>().SetBool("isRunning", false);
+                }
+            }
+            else if (stamina < maxstamina)
+                stamina += Time.deltaTime;
         }
-        else if (stamina < maxstamina)
-            stamina += Time.deltaTime;
 
 
     }

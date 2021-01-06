@@ -31,7 +31,7 @@ public class CrystalVain : Interactable
             Destroy(item);*/
          startMining = true;
          Player.GetComponent<MyPlayerController>().canMine = true;
-
+          
         }
         else if (isEmpty)
         {
@@ -39,7 +39,7 @@ public class CrystalVain : Interactable
             Debug.Log("Nothing left");
         }
     }
-    
+
     protected override void InteractionWithCrystalShard(GameObject item)
     {
         Debug.Log("Use pickaxe, not crystalshard!");
