@@ -62,7 +62,7 @@ public class MyPlayerController : MonoBehaviour
     void MovingXZ()
     {
         playerVelocity = new Vector3(0,playerRigidbody.velocity.y,0);
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        /*if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             speed *= speedBoost;
             if (Input.GetKey(KeyCode.W))
@@ -70,28 +70,64 @@ public class MyPlayerController : MonoBehaviour
                 GetComponent<Animator>().SetBool("isRunning", true);
                 playerVelocity += transform.forward * speed;
             }
-        }
+        }*/
         
-        else if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
-            GetComponent<Animator>().SetBool("isWalking", true);
-            playerVelocity += transform.forward * speed;
+            
+            
+
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                GetComponent<Animator>().SetBool("isRunning", true);
+                speed *= speedBoost;
+                playerVelocity += transform.forward * speed;
+            }
+            else
+            {
+                GetComponent<Animator>().SetBool("isWalking", true);
+                playerVelocity += transform.forward * speed;
+            }
+            
+            if (Input.GetKey(KeyCode.D))
+            {
+                playerVelocity += transform.right;
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                playerVelocity -= transform.right;
+            }
         }
         else if (Input.GetKey(KeyCode.S))
         {
+            GetComponent<Animator>().SetBool("isRunning", false);
+            speed = 1;
             GetComponent<Animator>().SetBool("isBacking", true);
             playerVelocity += (transform.forward * -1) * speed;
+            
+            if (Input.GetKey(KeyCode.D))
+            {
+                playerVelocity += transform.right;
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                playerVelocity -= transform.right;
+            }
         }
-        else if (Input.GetKey(KeyCode.D))
+        /*else if (Input.GetKey(KeyCode.D))
         {
+            GetComponent<Animator>().SetBool("isRunning", false);
+            speed = 1;
             playerVelocity += transform.right * speed;
             GetComponent<Animator>().SetBool("isWalking", true);
         }
         else if (Input.GetKey(KeyCode.A))
         {
+            GetComponent<Animator>().SetBool("isRunning", false);
+            speed = 1;
             playerVelocity -= transform.right * speed;
             GetComponent<Animator>().SetBool("isWalking", true);
-        }
+        }*/
         
 
         else
@@ -106,7 +142,8 @@ public class MyPlayerController : MonoBehaviour
         playerRigidbody.velocity = playerVelocity;
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            speed /= speedBoost;
+            //speed /= speedBoost;
+            speed = 1;
             GetComponent<Animator>().SetBool("isRunning", false);
         }
         

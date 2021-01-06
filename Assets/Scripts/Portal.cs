@@ -11,11 +11,12 @@ public class Portal : MonoBehaviour
     private bool countdown = false;
     
     public GameObject canvas;
-    private void Awake() => MyEventSystem.current.whenPedestalChangedState += CheckIfPedestalsAreActive;
+    //private void Awake() => MyEventSystem.current.whenPedestalChangedState += CheckIfPedestalsAreActive;
 
 
     private void Start()
     {
+        MyEventSystem.current.whenPedestalChangedState += CheckIfPedestalsAreActive;
         GetComponent<Collider>().isTrigger = true;
         if (GetComponent<Collider>().enabled)
             GetComponent<Collider>().enabled = false;
@@ -39,6 +40,7 @@ public class Portal : MonoBehaviour
                 Application.Quit();
             }
         }
+        //CheckIfPedestalsAreActive();
     }
 
     void CheckIfPedestalsAreActive()
@@ -48,8 +50,8 @@ public class Portal : MonoBehaviour
         {
             if (p.isActivated)
                 allPedestals -= 1;
-            else
-                break;
+            /*else
+                break;*/
         }
 
         if (allPedestals == 0)
@@ -94,10 +96,12 @@ public class Portal : MonoBehaviour
 
     private void ActivatePortal()
     {
+        
         ActivateCollider();
         ActivateMeshRenderer();
         ActivateLight();
         SoundManager.current.PlaySound(SoundManager.Sound.ActivatingPortal);
+        Debug.Log("Chuj");
     }
     
     private void DeactivatePortal()

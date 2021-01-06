@@ -7,6 +7,7 @@ public abstract class Interactable : MonoBehaviour
     protected abstract void InteractionWithPickaxe(GameObject item);
     protected abstract void InteractionWithCrystalShard(GameObject item);
     protected abstract void InteractionWithOther(GameObject item);
+        
 
     protected abstract void InteractionWithNull();
 
@@ -21,6 +22,11 @@ public abstract class Interactable : MonoBehaviour
                 InteractionWithPickaxe(item);
             else if (item.CompareTag("BlueShard") || item.CompareTag("PurpleShard") || item.CompareTag("YellowShard"))
                 InteractionWithCrystalShard(item);
+            /*else if (item.CompareTag("PaperCard"))
+            {
+                item.GetComponent<PaperCard>().ShowCardContent();
+                Debug.Log("Trafiono kartkę!");
+            }*/
             else
                 InteractionWithOther(item);
         }

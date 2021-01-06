@@ -51,8 +51,10 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\WallRandomizer.cs" />
+     <Compile Include="Assets\Scripts\Warper.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\SlimeSensor.cs" />
+     <Compile Include="Assets\Scripts\PaperCard.cs" />
      <Compile Include="Assets\Scripts\Interactable.cs" />
      <Compile Include="Assets\Scripts\Teleporter.cs" />
      <Compile Include="Assets\Scripts\MenuManager.cs" />

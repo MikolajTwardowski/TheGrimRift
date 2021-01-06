@@ -94,8 +94,16 @@ public class InteractionSystem : MonoBehaviour
                 InteractWith(target);
             else
             {
-                if (raycastHitInfo.collider.CompareTag("Pickaxe") || raycastHitInfo.collider.CompareTag("BlueShard") || raycastHitInfo.collider.CompareTag("YellowShard") || raycastHitInfo.collider.CompareTag("PurpleShard"))   //  do zmiany
+                if (raycastHitInfo.collider.CompareTag("Pickaxe") || raycastHitInfo.collider.CompareTag("BlueShard") || raycastHitInfo.collider.CompareTag("YellowShard") || 
+                    raycastHitInfo.collider.CompareTag("PurpleShard") || raycastHitInfo.collider.CompareTag("FirstShard") || raycastHitInfo.collider.CompareTag("SecondShard")
+                    || raycastHitInfo.collider.CompareTag("ThirdShard") || raycastHitInfo.collider.CompareTag("FourthShard"))   //  do zmiany
                     PickUp(raycastHitInfo.collider.gameObject);
+                
+                else if (raycastHitInfo.collider.CompareTag("PaperCard"))
+                {
+                    raycastHitInfo.collider.GetComponent<PaperCard>().ShowCardContent();
+                    //Debug.Log("Trafiono kartkę!");
+                }
                 else
                 {
                     Debug.Log("Nothing to take");

@@ -9,6 +9,11 @@ TagManager:
   - BlueShard
   - Pickaxe
   - Ore
+  - PaperCard
+  - FirstShard
+  - SecondShard
+  - ThirdShard
+  - FourthShard
   layers:
   - Default
   - TransparentFX

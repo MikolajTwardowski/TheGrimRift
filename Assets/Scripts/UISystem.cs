@@ -9,6 +9,7 @@ public class UISystem : MonoBehaviour
     Camera playerCamera;
     public GameObject OreMessage;
     public GameObject TakeMessage;
+    public GameObject ReadMessage;
 
     void Start()
     {
@@ -32,6 +33,7 @@ public class UISystem : MonoBehaviour
             {
                 OreMessage.SetActive(true);
                 TakeMessage.SetActive(false);
+                ReadMessage.SetActive(false);
             }
 
             
@@ -39,12 +41,21 @@ public class UISystem : MonoBehaviour
             {
                 TakeMessage.SetActive(true);
                 OreMessage.SetActive(false);
+                ReadMessage.SetActive(false);
+            }
+            
+            else if ((hit.collider.CompareTag("PaperCard")))
+            {
+                ReadMessage.SetActive(true);
+                TakeMessage.SetActive(false);
+                OreMessage.SetActive(false);
             }
             
         }
         
         else
         {
+            ReadMessage.SetActive(false);
             TakeMessage.SetActive(false);
             OreMessage.SetActive(false); 
         }
