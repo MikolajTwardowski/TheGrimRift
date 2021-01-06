@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MyPlayerController : MonoBehaviour
 {
@@ -13,11 +14,18 @@ public class MyPlayerController : MonoBehaviour
     Rigidbody playerRigidbody;
     Camera playerCamera;
 
+    bool isRunning = false;
+    
     public float speed;
     public float speedBoost;
     Vector3 playerVelocity;
 
     public bool canMine = false;
+
+    public Slider StaminaSlider;
+    
+    private float stamina = 7;
+    private float maxstamina = 7;
 
     float cameraXRotation;
     public float cameraMaxXAngle = 60;
@@ -72,23 +80,44 @@ public class MyPlayerController : MonoBehaviour
             }
         }*/
         
+        /*if (stamina < maxstamina)
+        {
+            stamina += Time.deltaTime;
+        }*/
+        
+        Debug.Log(stamina);  
+        
         if (Input.GetKey(KeyCode.W))
         {
             
-            
-
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+           /* if (Input.GetKeyDown(KeyCode.LeftShift) && stamina > 0)
             {
+                isRunning = true;
                 GetComponent<Animator>().SetBool("isRunning", true);
                 speed *= speedBoost;
                 playerVelocity += transform.forward * speed;
             }
             else
             {
+                isRunning = false;
                 GetComponent<Animator>().SetBool("isWalking", true);
                 playerVelocity += transform.forward * speed;
             }
-            
+             */
+
+           if (isRunning)
+           {
+               GetComponent<Animator>().SetBool("isRunning", true);
+               speed = 4;
+               playerVelocity += transform.forward * speed;
+           }
+
+           else
+           {
+               GetComponent<Animator>().SetBool("isWalking", true);
+               playerVelocity += transform.forward * speed;
+           }
+
             if (Input.GetKey(KeyCode.D))
             {
                 playerVelocity += transform.right;
@@ -98,6 +127,8 @@ public class MyPlayerController : MonoBehaviour
                 playerVelocity -= transform.right;
             }
         }
+
+
         else if (Input.GetKey(KeyCode.S))
         {
             GetComponent<Animator>().SetBool("isRunning", false);
@@ -140,12 +171,7 @@ public class MyPlayerController : MonoBehaviour
         }
         
         playerRigidbody.velocity = playerVelocity;
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            //speed /= speedBoost;
-            speed = 1;
-            GetComponent<Animator>().SetBool("isRunning", false);
-        }
+        
         
         if (Input.GetKey(KeyCode.M))
             canMine = true;
@@ -183,6 +209,11 @@ public class MyPlayerController : MonoBehaviour
     
     private void Update()
     {
+
+        StaminaSlider.value = stamina;
+        StaminaSlider.maxValue = maxstamina;
+
+
         if (!blockActions)
         {
             MovingXZ();
@@ -199,7 +230,32 @@ public class MyPlayerController : MonoBehaviour
             blockActions = true;
             GetComponent<Animator>().SetBool("isDead", true);
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
+            isRunning = true;
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            //speed /= speedBoost;
+            speed = 1;
+            GetComponent<Animator>().SetBool("isRunning", false);
+            isRunning = false;
+        }
+
+        if (isRunning)
+        {
+            stamina -= Time.deltaTime;
+            if (stamina < 0)
+            {
+                stamina = 0;
+                isRunning = false;
+                speed = 1;
+                GetComponent<Animator>().SetBool("isRunning", false);
+            }
+        }
+        else if (stamina < maxstamina)
+            stamina += Time.deltaTime;
+
+
     }
     
     void Mining()
