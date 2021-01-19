@@ -14,6 +14,7 @@ TagManager:
   - SecondShard
   - ThirdShard
   - FourthShard
+  - Pedestal
   layers:
   - Default
   - TransparentFX

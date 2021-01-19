@@ -12,6 +12,7 @@ public class UISystem : MonoBehaviour
     public GameObject OreMessage;
     public GameObject TakeMessage;
     public GameObject ReadMessage;
+    public GameObject PlaceMessage;
     public GameObject ingameMenu;
     private bool setPause = false;
 
@@ -95,6 +96,7 @@ public class UISystem : MonoBehaviour
                 OreMessage.SetActive(true);
                 TakeMessage.SetActive(false);
                 ReadMessage.SetActive(false);
+                PlaceMessage.SetActive(false);
             }
 
             
@@ -105,6 +107,7 @@ public class UISystem : MonoBehaviour
                 TakeMessage.SetActive(true);
                 OreMessage.SetActive(false);
                 ReadMessage.SetActive(false);
+                PlaceMessage.SetActive(false);
             }
             
             else if ((hit.collider.CompareTag("PaperCard")))
@@ -112,12 +115,21 @@ public class UISystem : MonoBehaviour
                 ReadMessage.SetActive(true);
                 TakeMessage.SetActive(false);
                 OreMessage.SetActive(false);
+                PlaceMessage.SetActive(false);
+            }
+            else if ((hit.collider.CompareTag("Pedestal")))
+            {
+                PlaceMessage.SetActive(true);
+                TakeMessage.SetActive(false);
+                OreMessage.SetActive(false);
+                ReadMessage.SetActive(false);
             }
             
         }
         
         else
         {
+            PlaceMessage.SetActive(false);
             ReadMessage.SetActive(false);
             TakeMessage.SetActive(false);
             OreMessage.SetActive(false); 

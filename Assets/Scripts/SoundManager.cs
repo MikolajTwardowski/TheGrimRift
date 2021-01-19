@@ -25,7 +25,8 @@ public class SoundManager : MonoBehaviour
         PlaceOnPedestal,
         Warp,
         MonsterCharge,
-        PlayerDeath
+        PlayerDeath,
+        MenuClick
     }
 
     Dictionary<Sound, float> soundTimerDictionary;
@@ -97,5 +98,10 @@ public class SoundManager : MonoBehaviour
     {
         public Sound sound;
         public AudioClip audioClip;
+    }
+
+    public void MenuClickSound()
+    {
+        SoundManager.current.PlaySound(SoundManager.Sound.MenuClick);
     }
 }

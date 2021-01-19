@@ -85,7 +85,6 @@ public class MyPlayerController : MonoBehaviour
             stamina += Time.deltaTime;
         }*/
         
-        Debug.Log(stamina);  
         
         if (Input.GetKey(KeyCode.W))
         {

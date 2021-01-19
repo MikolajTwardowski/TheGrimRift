@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
-    public GameObject ingameMenu;
-    public GameObject player;
+    //public GameObject ingameMenu;
+    //public GameObject player;
     
     
     void Awake()
@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
+        //yield return new WaitForSeconds(3.0f);
         SceneManager.LoadScene(1);
     }
     
@@ -26,12 +27,12 @@ public class MainMenu : MonoBehaviour
         
     }
     
-    public void ResumeGame()
-    {
-        Time.timeScale = 1.0f;
-        ingameMenu.SetActive (false);
+    //public void ResumeGame()
+    //{
+      //  Time.timeScale = 1.0f;
+        //ingameMenu.SetActive (false);
         //Cursor.visible = false;
         //Screen.lockCursor = true;
         //Cursor.lockState = CursorLockMode.Locked;
-    }
+    //}
 }
