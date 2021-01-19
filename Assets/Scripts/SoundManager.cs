@@ -26,7 +26,9 @@ public class SoundManager : MonoBehaviour
         Warp,
         MonsterCharge,
         PlayerDeath,
-        MenuClick
+        MenuClick,
+        MonsterStep
+        
     }
 
     Dictionary<Sound, float> soundTimerDictionary;

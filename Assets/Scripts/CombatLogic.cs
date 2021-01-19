@@ -62,6 +62,11 @@ public class CombatLogic : MonoBehaviour
             SoundManager.current.PlaySound(SoundManager.Sound.MonsterCharge);
         }
     
+    public void MonsterStepSound()
+    {
+        SoundManager.current.PlaySound(SoundManager.Sound.MonsterStep);
+    }
+    
     public void Fighting()
     {
         Animator = GetComponent<Animator>();
