@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
 
     //public GameObject ingameMenu;
     //public GameObject player;
-    
-    
+    public Slider slider;
+    public Text txtSlider;
+    public float maxSettingValue;
+    public float minSettingValue;
+
     void Awake()
     {
         Cursor.visible = true;

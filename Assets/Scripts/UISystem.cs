@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.HighDefinition;
 using UnityEngine.SceneManagement;
 
 public class UISystem : MonoBehaviour
@@ -14,11 +16,18 @@ public class UISystem : MonoBehaviour
     public GameObject ReadMessage;
     public GameObject PlaceMessage;
     public GameObject ingameMenu;
+    [SerializeField] Volume volume;
+    Exposure grimExposure;
+    float BrightnessExposure;
     private bool setPause = false;
+    float Exposure;
+    [Range(0f, 1f)] public float Brightness;
 
-    void Start()
+    void Awake()
     {
         playerCamera = GetComponentInChildren<Camera>();
+        //grimExposure = volume.GetComponent<Exposure>();
+        
     }
     
     void Update()
@@ -36,11 +45,26 @@ public class UISystem : MonoBehaviour
             
             }
         }
-
+        
+        //Debug.Log(grimExposure.fixedExposure.value);
         OpenMenu();
+        //volume.GetComponent<Exposure>().fixedExposure.value = Brightness;
+        //SetBrightness();
     }
 
+    void SetBrightness()
+    {
 
+        //volume = GetComponent<Volume>();
+        //Exposure expo = null;
+
+        //volume.profile.TryGet(out expo);
+
+        //expo.fixedExposure.value = 20;
+
+    }
+    
+    
     void OpenMenu()
     {
         if (setPause)
