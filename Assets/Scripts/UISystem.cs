@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering;
-using UnityEngine.Rendering.HighDefinition;
 using UnityEngine.SceneManagement;
 
 public class UISystem : MonoBehaviour
@@ -16,8 +15,6 @@ public class UISystem : MonoBehaviour
     public GameObject ReadMessage;
     public GameObject PlaceMessage;
     public GameObject ingameMenu;
-    [SerializeField] Volume volume;
-    Exposure grimExposure;
     float BrightnessExposure;
     private bool setPause = false;
     float Exposure;
